@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor - Cifra de César/Base64</title>
+    <link rel="stylesheet" href="cifra-cesar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Radio+Canada&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="box-principal">
+        <h1>Conversor - Cifra de César / Base64</h1>
+        <br>
+        <h3>Neste site você pode codificar e decodificar suas mensagens!</h3>
+        <br>
+        <form class="cesar-form"> 
+            <label id="digite-aqui" for="message">Digite sua mensagem no quadro preto abaixo:</label><br><br>
+            <textarea rows="2" cols="5" id="message-input" name="message-input" placeholder="mensagem de entrada"></textarea>
+            <textarea rows="2" cols="5" id="message-output" name="message-output" placeholder="mensagem de saída"></textarea>
+            <div id="optionbox">
+                <h4>Escolha um método de codificação abaixo:</h4>
+                <select name="opcoes" id="opcoes">
+                    <option value="" disabled selected id="selecione">Selecione...</option>
+                    <option value="cesar" id="cesar">Cifra de César</option>
+                    <option value="base64" id="base64">Base64</option>
+                </select>
+            </div>
+        </form>
+    </div>
+    <div class="box-secundario" style="visibility: hidden;">
+        <form class="incremento-form">
+            <h3 class="titulo-cifra">Cifra de César</h3>
+            <label id="digite-incremento" for="incremento">Digite o incremento que deseja para sua codificação</label><br><br>
+            <input type="number" id="input-incremento" min="1" max="26">
+            <div class="radio-buttons">
+                <input type="radio" id="codificar" name="foo" value="codificar">
+                <label for="codificar">Codificar</label><br>
+                <input type="radio" id="decodificar" name="foo" value="decodificar">
+                <label for="decodificar">Decodificar</label>
+            </div>
+            <input type="submit" id="codifCesar" value="...">
+        </form>
+    </div>
+    <div class="box-terciario" style="visibility: hidden;">
+        <form class="base64-form">
+            <h3 class="titulo-base64">Base64</h3>
+            <div class="radio-buttons2">
+                <input type="radio" id="codificar2" name="foo" value="codificar">
+                <label for="codificar">Codificar</label><br>
+                <input type="radio" id="decodificar2" name="foo" value="decodificar">
+                <label for="decodificar">Decodificar</label>
+            </div>
+            <input type="submit" id="codif64" value="...">
+        </form>
+    </div>
+    <script src="cifra-cesar.js"></script>
+</body>
+</html>
